@@ -65,9 +65,9 @@ main {
 
 .win {
   display: none;
-  font-size: 2rem;
+  font-size: 6rem;
   font-weight: 300;
-  color: #c7365f;
+  color: #ffffff;
   margin-bottom: auto;
 }
 
