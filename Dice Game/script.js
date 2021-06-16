@@ -32,6 +32,9 @@ const init = function () {
   player1El.classList.remove('player--winner');
   player0El.classList.add('player--active');
   player1El.classList.remove('player--active');
+  const winBlocks = document
+    .querySelectorAll(`.win`);
+  winBlocks.forEach(winBlock => winBlock.classList.remove('visible'));
 };
 init();
 
@@ -77,7 +80,7 @@ btnHold.addEventListener('click', function () {
       scores[activePlayer];
 
     // 2. Check if player's score is >= 100
-    if (scores[activePlayer] >= 100) {
+    if (scores[activePlayer] >= 10) {
       // Finish the game
       playing = false;
       diceEl.classList.add('hidden');
@@ -85,6 +88,11 @@ btnHold.addEventListener('click', function () {
       document
         .querySelector(`.player--${activePlayer}`)
         .classList.add('player--winner');
+
+      document
+        .querySelector(`#win--${activePlayer}`)
+        .classList.add('visible');
+
       document
         .querySelector(`.player--${activePlayer}`)
         .classList.remove('player--active');

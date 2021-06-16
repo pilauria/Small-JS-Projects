@@ -63,6 +63,18 @@ main {
   margin-bottom: auto;
 }
 
+.win {
+  display: none;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #c7365f;
+  margin-bottom: auto;
+}
+
+.visible {
+  display: block;
+}
+
 .player--active {
   background-color: rgba(255, 255, 255, 0.4);
 }
